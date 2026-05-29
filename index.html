@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crumb & Hearth - A Baking Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:wght@300;400;700&family=Caveat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <p class="header-eyebrow">est. in a warm kitchen, 2024</p>
+      <h1>Crumb <em>&</em> Hearth</h1>
+      <p class="sub">Recipes, techniques &amp; the joy of home baking</p>
+      <nav>
+        <a href="#">Breads</a>
+        <a href="#">Pastries</a>
+        <a href="#">Cakes</a>
+        <a href="#">Techniques</a>
+        <a href="#leave-a-note">Leave a Note</a>
+      </nav>
+      <svg
+        class="wave-divider"
+        viewBox="0 0 1440 40"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z"
+          fill="#f0e6d0"
+        />
+      </svg>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <span class="tag">✦ This week's feature</span>
+        <h2>
+          <a href="#" onclick="toggleFull(event, 'hero-full')"
+            >The Secret to a Perfect Sourdough Crust</a
+          >
+        </h2>
+        <p>
+          After two years and more failed loaves than I care to admit, I finally
+          cracked it. The answer isn't in the recipe it's in the steam.
+        </p>
+        <div class="post-full-text" id="hero-full">
+          The oven spring that dramatic bloom your loaf takes in the first ten
+          minutes of baking happens only when the surface of the dough stays
+          moist enough to keep expanding. A dry oven sets the crust too early,
+          and you get a dense, pale brick. The solution bakers have used for
+          centuries is steam. At home, the simplest method is a Dutch oven: the
+          lid traps the bread's own moisture, creating a micro-steam
+          environment. Remove the lid for the final twenty minutes to brown and
+          blister. The result? A deep mahogany crust that shatters when you cut
+          it, with a chewy, open crumb that makes even plain butter taste like
+          something worth writing home about.
+        </div>
+        <button
+          class="read-btn"
+          onclick="toggleFull(event, 'hero-full')"
+          id="btn-hero-full"
+        >
+          Read the full post ↓
+        </button>
+      </div>
+      <div class="hero-visual">
+        <div class="bread-card">
+          <!-- Illustrated sourdough loaf -->
+          <svg viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
+            <!-- cutting board -->
+            <rect
+              x="10"
+              y="90"
+              width="160"
+              height="20"
+              rx="4"
+              fill="#c8843a"
+              opacity="0.3"
+            />
+            <!-- loaf body -->
+            <ellipse cx="90" cy="72" rx="68" ry="30" fill="#c8843a" />
+            <ellipse cx="90" cy="65" rx="62" ry="26" fill="#d4955a" />
+            <!-- score marks -->
+            <path
+              d="M58,55 Q90,48 122,55"
+              stroke="#7a4019"
+              stroke-width="1.5"
+              fill="none"
+              opacity="0.6"
+            />
+            <path
+              d="M65,62 Q90,56 115,62"
+              stroke="#7a4019"
+              stroke-width="1.2"
+              fill="none"
+              opacity="0.5"
+            />
+            <!-- highlight -->
+            <ellipse
+              cx="75"
+              cy="55"
+              rx="18"
+              ry="7"
+              fill="white"
+              opacity="0.12"
+            />
+            <!-- steam wisps -->
+            <path
+              d="M70,38 Q72,30 70,22"
+              stroke="#9a8878"
+              stroke-width="1.5"
+              fill="none"
+              stroke-linecap="round"
+              opacity="0.5"
+            />
+            <path
+              d="M90,34 Q93,26 90,18"
+              stroke="#9a8878"
+              stroke-width="1.5"
+              fill="none"
+              stroke-linecap="round"
+              opacity="0.5"
+            />
+            <path
+              d="M110,38 Q112,30 110,22"
+              stroke="#9a8878"
+              stroke-width="1.5"
+              fill="none"
+              stroke-linecap="round"
+              opacity="0.5"
+            />
+          </svg>
+          <p
+            style="
+              font-family: &quot;Cormorant Garamond&quot;, serif;
+              font-style: italic;
+              font-size: 0.95rem;
+              color: var(--muted);
+              margin-top: 0.8rem;
+            "
+          >
+            Country sourdough boule
+          </p>
+          <div class="recipe-stats">
+            <div class="stat">
+              <span class="val">4h</span><span class="lbl">Total</span>
+            </div>
+            <div class="stat">
+              <span class="val">75%</span><span class="lbl">Hydration</span>
+            </div>
+            <div class="stat">
+              <span class="val">Med</span><span class="lbl">Difficulty</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POST GRID -->
+    <div class="section-header">
+      <h2>From the Blog</h2>
+      <div class="line"></div>
+      <span class="handwritten">fresh from the oven ✦</span>
+    </div>
+
+    <section class="posts-grid">
+      <article class="post-card">
+        <span class="icon">🥐</span>
+        <span class="category">Pastries</span>
+        <h3><a href="#">Laminated Dough, Demystified</a></h3>
+        <p>
+          Croissants seem impossibly technical. But once you understand what
+          lamination is actually doing and why butter temperature matters so
+          much they become approachable.
+        </p>
+        <div class="meta">
+          <span>Clara Bennet</span><span class="dot">·</span
+          ><span>12 min read</span><span class="dot">·</span><span>May 20</span>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <span class="icon">🍰</span>
+        <span class="category">Cakes</span>
+        <h3><a href="#">Why Reverse Creaming Changes Everything</a></h3>
+        <p>
+          The classic "cream butter and sugar first" method is not the only way.
+          Adding fat to flour before liquid produces a more tender, velvety
+          crumb and it's actually easier.
+        </p>
+        <div class="meta">
+          <span>James Holloway</span><span class="dot">·</span
+          ><span>8 min read</span><span class="dot">·</span><span>May 17</span>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <span class="icon">🍞</span>
+        <span class="category">Breads</span>
+        <h3><a href="#">No-Knead Focaccia for a Friday Night</a></h3>
+        <p>
+          You don't need fancy equipment, strong arms, or any plan made before
+          4pm. This focaccia comes together in a bowl with a spoon and rewards
+          you with golden, dimpled perfection.
+        </p>
+        <div class="meta">
+          <span>Clara Bennet</span><span class="dot">·</span
+          ><span>6 min read</span><span class="dot">·</span><span>May 14</span>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <span class="icon">🧁</span>
+        <span class="category">Techniques</span>
+        <h3><a href="#">Understanding Baking Powder vs. Baking Soda</a></h3>
+        <p>
+          Recipes mix them, swap them, or use both at once. Here's the actual
+          chemistry of what each does — and why using the wrong one means flat,
+          bitter results.
+        </p>
+        <div class="meta">
+          <span>James Holloway</span><span class="dot">·</span
+          ><span>5 min read</span><span class="dot">·</span><span>May 10</span>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <span class="icon">🥧</span>
+        <span class="category">Pastries</span>
+        <h3><a href="#">The Butter Tart Debate: Runny or Firm?</a></h3>
+        <p>
+          A purely personal, entirely biased case for the runny filling. With a
+          recipe that achieves just barely-set custard and a shattering short
+          pastry shell.
+        </p>
+        <div class="meta">
+          <span>Priya Sen</span><span class="dot">·</span><span>7 min read</span
+          ><span class="dot">·</span><span>May 7</span>
+        </div>
+      </article>
+
+      <article class="post-card">
+        <span class="icon">🍫</span>
+        <span class="category">Cakes</span>
+        <h3><a href="#">One Bowl Brown Butter Chocolate Cake</a></h3>
+        <p>
+          Brown butter adds a hazelnut depth to chocolate cake that no extract
+          can replicate. This is a weeknight recipe that tastes like you spent
+          all weekend on it.
+        </p>
+        <div class="meta">
+          <span>Clara Bennet</span><span class="dot">·</span
+          ><span>10 min read</span><span class="dot">·</span><span>May 3</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- TIPS BAND -->
+    <section class="tips-band">
+      <h2>Baker's Notes Worth Keeping</h2>
+      <ul class="tips-list">
+        <li>
+          <span class="tip-num">01</span>
+          <span
+            ><strong style="color: #faf6ef">Weigh everything.</strong> Volume
+            measurements are inconsistent a cup of flour can vary by up to 30g
+            depending on how it's scooped. A scale is the single highest-return
+            piece of kit you can own.</span
+          >
+        </li>
+        <li>
+          <span class="tip-num">02</span>
+          <span
+            ><strong style="color: #faf6ef"
+              >Egg and butter temperature matters.</strong
+            >
+            Cold eggs can cause batters to split; cold butter won't cream
+            properly. Unless a recipe specifies otherwise, room temperature
+            means it.</span
+          >
+        </li>
+        <li>
+          <span class="tip-num">03</span>
+          <span
+            ><strong style="color: #faf6ef">Ovens lie.</strong> An oven
+            thermometer costs almost nothing and will save you years of
+            wondering why your cakes always come out dense. Most home ovens run
+            10–25°C off.</span
+          >
+        </li>
+        <li>
+          <span class="tip-num">04</span>
+          <span
+            ><strong style="color: #faf6ef"
+              >Resting dough isn't optional.</strong
+            >
+            Gluten needs time to relax after mixing and kneading. Skipping rest
+            periods is why rolled pastry shrinks back and bread is tough.</span
+          >
+        </li>
+      </ul>
+    </section>
+
+    <!-- COMMENTS -->
+    <div id="leave-a-note">
+      <div class="comment-wrap">
+        <h2>Leave a Note</h2>
+        <p class="subtext">
+          Questions, baking disasters, triumphant loaves, all welcome here.
+        </p>
+
+        <div class="existing-comments" id="comments-list">
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="c-avatar">S</div>
+              <span class="c-name">Sophie T.</span>
+              <span class="c-date">May 21, 2025</span>
+            </div>
+            <p class="c-body">
+              The Dutch oven tip changed my sourdough life. I'd been misting the
+              oven door for years and never getting that blistered crust. Tried
+              the lid method last weekend incredible difference. Thank you!
+            </p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="c-avatar">R</div>
+              <span class="c-name">Rohan M.</span>
+              <span class="c-date">May 19, 2025</span>
+            </div>
+            <p class="c-body">
+              The brown butter chocolate cake is now in permanent rotation in
+              this house. I added a pinch of espresso powder and it somehow got
+              even better. Highly recommend trying it.
+            </p>
+          </div>
+          <div class="comment-item">
+            <div class="comment-header">
+              <div class="c-avatar">L</div>
+              <span class="c-name">Lena K.</span>
+              <span class="c-date">May 16, 2025</span>
+            </div>
+            <p class="c-body">
+              Finally someone explains baking powder vs baking soda clearly!
+              I've been baking for ten years and just nodded along whenever a
+              recipe said to use both. Now I actually understand why.
+            </p>
+          </div>
+        </div>
+
+        <form class="comment-form" onsubmit="postComment(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cname">Your Name</label>
+              <input
+                type="text"
+                id="cname"
+                placeholder="e.g. Sophie T."
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="cemail">Email (not published)</label>
+              <input
+                type="email"
+                id="cemail"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cbody">Your Comment</label>
+            <textarea
+              id="cbody"
+              placeholder="Share a tip, ask a question, or just say hello…"
+              required
+            ></textarea>
+          </div>
+          <button class="btn-post" type="submit">Post Comment</button>
+          <div class="confirm" id="confirm">
+            ✓ &nbsp;Thanks! Your comment will appear after a quick review.
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <span class="footer-brand">Crumb &amp; Hearth</span>
+      <span class="footer-note"
+        >Built with HTML, CSS &amp; JS &nbsp;·&nbsp; Blog page &nbsp;·&nbsp;
+        <span id="yr"></span
+      ></span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
