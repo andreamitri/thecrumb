@@ -237,6 +237,29 @@ nav a:hover {
   color: var(--muted);
 }
 
+/*BLOG STATS BAR*/
+.blog-stats {
+  background: var(--dough);
+  border-top: 1px solid var(--rule);
+  padding: 0.85rem clamp(1.5rem, 5vw, 4rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.8rem;
+  align-items: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.blog-stats .stats-dot {
+  color: var(--rule);
+}
+.blog-stats .stat-longest {
+  font-style: italic;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
 /*RECIPE GRID*/
 .section-header {
   display: flex;
