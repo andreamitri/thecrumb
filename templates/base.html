@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Crumb &amp; Hearth{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Lato:wght@300;400;700&family=Caveat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <p class="header-eyebrow">est. in a warm kitchen, 2024</p>
+      <h1>
+        <a href="{{ url_for('home') }}">Crumb <em>&amp;</em> Hearth</a>
+      </h1>
+      <p class="sub">Recipes, techniques &amp; the joy of home baking</p>
+      <nav>
+        <a href="{{ url_for('tag_page', tag='bread') }}">Breads</a>
+        <a href="{{ url_for('tag_page', tag='pastries') }}">Pastries</a>
+        <a href="{{ url_for('tag_page', tag='cakes') }}">Cakes</a>
+        <a href="{{ url_for('tag_page', tag='technique') }}">Techniques</a>
+        <a href="{{ url_for('new_post') }}" class="nav-cta">+ New Post</a>
+      </nav>
+      <svg
+        class="wave-divider"
+        viewBox="0 0 1440 40"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z"
+          fill="#f0e6d0"
+        />
+      </svg>
+    </header>
+
+    <main>{% block content %}{% endblock %}</main>
+
+    <footer>
+      <span class="footer-brand">Crumb &amp; Hearth</span>
+      <div class="footer-tags">
+        {% for tag in all_tags[:12] %}
+        <a href="{{ url_for('tag_page', tag=tag) }}" class="footer-tag"
+          >#{{ tag }}</a
+        >
+        {% endfor %}
+      </div>
+      <span class="footer-note"><span id="yr"></span></span>
+    </footer>
+    <script>
+      document.getElementById("yr").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

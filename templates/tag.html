@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% block title %}#{{ tag }} — Crumb &amp; Hearth{%
+endblock %} {% block content %}
+<div class="tag-page-header">
+  <span class="tag-page-eyebrow">Tag</span>
+  <h1>#{{ tag }}</h1>
+  <p>
+    {{ posts|length }} post{{ 's' if posts|length != 1 else '' }} tagged #{{ tag
+    }}
+  </p>
+</div>
+
+<section class="posts-grid">
+  {% for post in posts %}
+  <article class="post-card">
+    <span class="icon">{{ post.icon }}</span>
+    <span class="category">{{ post.category }}</span>
+    <h3>
+      <a href="{{ url_for('post_detail', post_id=post.post_id) }}">
+        {{ post.title }}
+      </a>
+    </h3>
+    <p class="excerpt">{{ post.excerpt(150) }}</p>
+    <div class="tag-row">
+      {% for t in post.tags %}
+      <a
+        href="{{ url_for('tag_page', tag=t) }}"
+        class="tag-chip {% if t == tag %}tag-chip--active{% endif %}"
+      >
+        #{{ t }}
+      </a>
+      {% endfor %}
+    </div>
+    <div class="meta">
+      <span>{{ post.author }}</span>
+      <span class="dot">·</span>
+      <span>{{ post.formatted_date() }}</span>
+    </div>
+    <a
+      href="{{ url_for('post_detail', post_id=post.post_id) }}"
+      class="read-link"
+    >
+      Read post →
+    </a>
+  </article>
+  {% endfor %}
+</section>
+
+<div class="all-tags-section">
+  <h3>All Tags</h3>
+  <div class="all-tags-grid">
+    {% for t in all_tags %}
+    <a
+      href="{{ url_for('tag_page', tag=t) }}"
+      class="tag-chip {% if t == tag %}tag-chip--active{% endif %}"
+    >
+      #{{ t }}
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

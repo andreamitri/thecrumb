@@ -1,0 +1,52 @@
+{% extends "base.html" %} {% block title %}Crumb &amp; Hearth — Home Baking
+Blog{% endblock %} {% block content %}
+<section class="hero-band">
+  <div class="hero-band-text">
+    <span class="tag-label">✦ {{ posts|length }} recipes &amp; counting</span>
+    <h2>Welcome to the kitchen.</h2>
+    <p>A blog about the craft of home baking.</p>
+    <a href="{{ url_for('new_post') }}" class="btn-primary">Write a New Post</a>
+  </div>
+</section>
+
+<div class="section-header">
+  <h2>All Posts</h2>
+  <div class="line"></div>
+  <span class="handwritten">newest first ✦</span>
+</div>
+
+<section class="posts-grid">
+  {% for post in posts %}
+  <article class="post-card">
+    <span class="icon">{{ post.icon }}</span>
+    <span class="category">{{ post.category }}</span>
+    <h3>
+      <a href="{{ url_for('post_detail', post_id=post.post_id) }}">
+        {{ post.title }}
+      </a>
+    </h3>
+    <p class="excerpt">{{ post.excerpt(150) }}</p>
+    <div class="tag-row">
+      {% for tag in post.tags %}
+      <a href="{{ url_for('tag_page', tag=tag) }}" class="tag-chip"
+        >#{{ tag }}</a
+      >
+      {% endfor %}
+    </div>
+    <div class="meta">
+      <span>{{ post.author }}</span>
+      <span class="dot">·</span>
+      <span>{{ post.formatted_date() }}</span>
+      <span class="dot">·</span>
+      <span>{{ post.read_mins }} min read</span>
+    </div>
+    <a
+      href="{{ url_for('post_detail', post_id=post.post_id) }}"
+      class="read-link"
+    >
+      Read post →
+    </a>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}

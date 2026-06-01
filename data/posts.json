@@ -1,0 +1,188 @@
+[
+  {
+    "post_id": 1,
+    "title": "The Secret to a Perfect Sourdough Crust",
+    "date": "2025-05-22",
+    "body": "After two years and more failed loaves than I care to admit, I finally cracked it. The answer is not in the recipe — it is in the steam.\n\nThe oven spring happens only when the surface stays moist enough to keep expanding. Use a Dutch oven: the lid traps moisture. Remove it for the final 20 minutes to brown and blister.\n\nScore your loaf at a 45-degree angle. Bake at 250C covered, then 220C uncovered. Let it cool fully before slicing.",
+    "tags": [
+      "sourdough",
+      "bread",
+      "technique",
+      "crust",
+      "steam"
+    ],
+    "author": "Clara Bennet",
+    "category": "Breads",
+    "icon": "🍞",
+    "read_mins": 7
+  },
+  {
+    "post_id": 2,
+    "title": "Laminated Dough, Demystified",
+    "date": "2025-05-20",
+    "body": "Croissants seem impossibly technical. But once you understand what lamination is doing, they become approachable.\n\nLamination means folding layers of butter into dough repeatedly. The butter must stay cold and distinct. Work in a cool kitchen, chill everything, and rest in the fridge between turns.\n\nThree double turns gives you 729 distinct layers.",
+    "tags": [
+      "pastries",
+      "croissants",
+      "lamination",
+      "technique",
+      "butter"
+    ],
+    "author": "Clara Bennet",
+    "category": "Pastries",
+    "icon": "🥐",
+    "read_mins": 12
+  },
+  {
+    "post_id": 3,
+    "title": "Why Reverse Creaming Changes Everything",
+    "date": "2025-05-17",
+    "body": "The classic cream butter and sugar first method is not the only way. Adding fat to flour before liquid produces a more tender crumb.\n\nReverse creaming coats the flour particles in fat first, limiting gluten development. Less gluten means a softer texture.\n\nTry it once on a vanilla cake and you will not go back.",
+    "tags": [
+      "cakes",
+      "technique",
+      "creaming",
+      "texture",
+      "baking-science"
+    ],
+    "author": "James Holloway",
+    "category": "Cakes",
+    "icon": "🍰",
+    "read_mins": 8
+  },
+  {
+    "post_id": 4,
+    "title": "No-Knead Focaccia for a Friday Night",
+    "date": "2025-05-14",
+    "body": "You do not need fancy equipment or any plan made before 4pm.\n\nCombine flour, water, yeast, salt and olive oil. Stir until shaggy. Refrigerate overnight. Tip into an oiled tin, dimple aggressively, scatter salt and rosemary, bake at 220C.\n\nEat the same day, torn rather than sliced.",
+    "tags": [
+      "bread",
+      "focaccia",
+      "no-knead",
+      "olive-oil",
+      "easy"
+    ],
+    "author": "Clara Bennet",
+    "category": "Breads",
+    "icon": "🍞",
+    "read_mins": 6
+  },
+  {
+    "post_id": 5,
+    "title": "Understanding Baking Powder vs Baking Soda",
+    "date": "2025-05-10",
+    "body": "Recipes mix them, swap them, or use both. Here is the actual chemistry.\n\nBaking soda is a pure base. It reacts immediately with acid to release CO2. Batters made with soda must go straight into the oven.\n\nBaking powder is soda pre-mixed with a dry acid. It is double-acting. Soda is roughly 3 to 4 times stronger.",
+    "tags": [
+      "technique",
+      "baking-science",
+      "chemistry",
+      "leavening"
+    ],
+    "author": "James Holloway",
+    "category": "Techniques",
+    "icon": "🧁",
+    "read_mins": 5
+  },
+  {
+    "post_id": 6,
+    "title": "The Butter Tart Debate: Runny or Firm?",
+    "date": "2025-05-07",
+    "body": "A purely personal, entirely biased case for the runny filling.\n\nMelt butter with brown sugar, whisk in eggs and golden syrup, fill short-pastry shells two thirds full.\n\nBake at 200C for 15 to 17 minutes. The filling should be puffed and barely set.",
+    "tags": [
+      "pastries",
+      "butter-tart",
+      "canadian",
+      "custard",
+      "short-pastry"
+    ],
+    "author": "Priya Sen",
+    "category": "Pastries",
+    "icon": "🥧",
+    "read_mins": 7
+  },
+  {
+    "post_id": 7,
+    "title": "One Bowl Brown Butter Chocolate Cake",
+    "date": "2025-05-03",
+    "body": "Brown butter adds a hazelnut depth that no extract can replicate.\n\nBrown 150g butter until the solids turn amber. Cool slightly, then whisk in sugar, eggs, flour, cocoa, baking powder, salt and buttermilk.\n\nBake at 175C for 30 to 35 minutes. Finish with equal parts cream and dark chocolate.",
+    "tags": [
+      "cakes",
+      "chocolate",
+      "brown-butter",
+      "one-bowl",
+      "easy"
+    ],
+    "author": "Clara Bennet",
+    "category": "Cakes",
+    "icon": "🍫",
+    "read_mins": 10
+  },
+  {
+    "post_id": 8,
+    "title": "Choux Pastry: What Nobody Tells You",
+    "date": "2025-04-28",
+    "body": "Choux is cooked twice: on the hob, then in the oven.\n\nBoil water with butter, tip in flour all at once and beat until the dough leaves the pan. Cook one more minute to dry it out — most recipes skip this step.\n\nBeat in eggs one at a time. Bake at 200C for 25 minutes without opening the oven.",
+    "tags": [
+      "pastries",
+      "choux",
+      "technique",
+      "eclairs",
+      "profiteroles"
+    ],
+    "author": "James Holloway",
+    "category": "Pastries",
+    "icon": "🥐",
+    "read_mins": 9
+  },
+  {
+    "post_id": 9,
+    "title": "The Case for Cold-Fermented Pizza Dough",
+    "date": "2025-04-21",
+    "body": "Most pizza dough recipes say rest for one hour. They are leaving flavour on the table.\n\nCold fermentation over 48 to 72 hours develops acids and esters a quick rise never produces.\n\nUse 00 flour, 3g yeast per 500g flour, refrigerate 48 to 72 hours, bake on a preheated steel at 280C.",
+    "tags": [
+      "bread",
+      "pizza",
+      "fermentation",
+      "cold-proof",
+      "technique"
+    ],
+    "author": "Priya Sen",
+    "category": "Breads",
+    "icon": "🍕",
+    "read_mins": 8
+  },
+  {
+    "post_id": 10,
+    "title": "Tarte Tatin: A Controlled Accident",
+    "date": "2025-04-15",
+    "body": "The tarte Tatin was allegedly invented by accident — an apple tart baked upside down and rescued by flipping.\n\nCaramelise apples directly in the pan, top with pastry, bake, then invert. Cook the caramel to deep amber before adding the apples.\n\nRest five minutes before inverting. Serve warm with creme fraiche.",
+    "tags": [
+      "pastries",
+      "french",
+      "tarte-tatin",
+      "apples",
+      "caramel"
+    ],
+    "author": "Clara Bennet",
+    "category": "Pastries",
+    "icon": "🥧",
+    "read_mins": 8
+  },
+  {
+    "post_id": 11,
+    "title": "Rye Bread: Dark, Dense, and Worth It",
+    "date": "2025-04-08",
+    "body": "Rye bread intimidates beginners because it behaves nothing like wheat bread.\n\nRye contains less gluten-forming protein and more pentosans that create a gel-like structure. This is why rye doughs are baked in tins rather than shaped freeform.\n\nCool completely overnight before slicing.",
+    "tags": [
+      "bread",
+      "rye",
+      "sourdough",
+      "dense",
+      "technique"
+    ],
+    "author": "James Holloway",
+    "category": "Breads",
+    "icon": "🍞",
+    "read_mins": 9
+  }
+]
