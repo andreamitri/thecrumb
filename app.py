@@ -2,11 +2,10 @@ from flask import Flask, render_template, request, redirect, url_for, abort
 from datetime import date
 
 from modules.models     import BlogPost, Comment
-from modules.storage    import (
-    load_posts, get_post_by_id, add_post, update_post,
-    get_comments_for_post, add_comment,
-    get_all_tags, get_posts_by_tag,
-    next_post_id, next_comment_id,
+from modules.database import (
+    get_all_posts, get_post_by_id, create_post, update_post, delete_post,
+    get_comments_for_post, create_comment,
+    get_all_tags, get_posts_by_tag, search_posts, get_stats,
 )
 from modules.validation import validate_comment, validate_post
 

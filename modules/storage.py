@@ -1,3 +1,10 @@
+"""
+modules/storage.py
+------------------
+Original file I/O module using JSON files.
+Superseded by modules/database.py in the database phase.
+Kept here to show the progression from flat-file storage to SQLite.
+"""
 import json
 import os
 from modules.models import BlogPost, Comment
