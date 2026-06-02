@@ -114,6 +114,46 @@ nav a.nav-cta {
 nav a.nav-cta {
   font-weight: 700;
 }
+/* Search bar in header */
+.header-search {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  padding: 0 clamp(1.5rem, 5vw, 4rem) 1.8rem;
+  margin-top: -0.5rem;
+}
+.header-search input {
+  background: rgba(250, 246, 239, 0.1);
+  border: 1px solid rgba(250, 246, 239, 0.2);
+  color: var(--flour);
+  font-family: "Lato", sans-serif;
+  font-size: 0.82rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  width: min(320px, 80vw);
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.header-search input::placeholder {
+  color: rgba(250, 246, 239, 0.4);
+}
+.header-search input:focus {
+  background: rgba(250, 246, 239, 0.15);
+  border-color: var(--crust);
+}
+.header-search button {
+  background: var(--crust);
+  border: none;
+  color: var(--flour);
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+.header-search button:hover {
+  background: var(--burnt);
+}
 
 /*HERO BAND*/
 .hero-band {
@@ -466,8 +506,7 @@ nav a.nav-cta {
 .form-group--wide {
   grid-column: 1 / -1;
 }
-.form-group--narrow {
-}
+
 .form-actions {
   display: flex;
   gap: 1rem;

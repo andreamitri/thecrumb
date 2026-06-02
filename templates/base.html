@@ -28,6 +28,15 @@
         <a href="{{ url_for('tag_page', tag='technique') }}">Techniques</a>
         <a href="{{ url_for('new_post') }}" class="nav-cta">+ New Post</a>
       </nav>
+      <form action="{{ url_for('search') }}" method="GET" class="header-search">
+        <input
+          type="text"
+          name="q"
+          placeholder="Search posts…"
+          value="{{ request.args.get('q', '') }}"
+        />
+        <button type="submit">↵</button>
+      </form>
       <svg
         class="wave-divider"
         viewBox="0 0 1440 40"

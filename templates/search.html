@@ -1,0 +1,77 @@
+{% extends "base.html" %} {% block title %}Search — Crumb &amp; Hearth{%
+endblock %} {% block content %}
+<div class="tag-page-header">
+  <span class="tag-page-eyebrow">Search</span>
+  <h1>{{ posts|length }} result{{ 's' if posts|length != 1 else '' }}</h1>
+  <p>for <strong>"{{ query }}"</strong></p>
+</div>
+
+<div style="padding: 1.5rem clamp(1.5rem, 5vw, 4rem)">
+  <form
+    action="{{ url_for('search') }}"
+    method="GET"
+    style="display: flex; gap: 0.8rem; max-width: 480px"
+  >
+    <input
+      type="text"
+      name="q"
+      value="{{ query }}"
+      placeholder="Search posts…"
+      style="
+        flex: 1;
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--rule);
+        background: var(--flour);
+        font-size: 0.92rem;
+        outline: none;
+      "
+    />
+    <button class="btn-primary" type="submit">Search</button>
+  </form>
+</div>
+
+{% if posts %}
+<section class="posts-grid">
+  {% for post in posts %}
+  <article class="post-card">
+    <span class="icon">{{ post.icon }}</span>
+    <span class="category">{{ post.category }}</span>
+    <h3>
+      <a href="{{ url_for('post_detail', post_id=post.post_id) }}">
+        {{ post.title }}
+      </a>
+    </h3>
+    <p class="excerpt">{{ post.excerpt(150) }}</p>
+    <div class="tag-row">
+      {% for tag in post.tags %}
+      <a href="{{ url_for('tag_page', tag=tag) }}" class="tag-chip">
+        #{{ tag }}
+      </a>
+      {% endfor %}
+    </div>
+    <div class="meta">
+      <span>{{ post.author }}</span>
+      <span class="dot">·</span>
+      <span>{{ post.formatted_date() }}</span>
+    </div>
+    <a
+      href="{{ url_for('post_detail', post_id=post.post_id) }}"
+      class="read-link"
+      >Read post →</a
+    >
+  </article>
+  {% endfor %}
+</section>
+
+{% elif query %}
+<div class="empty-state" style="padding: 3rem clamp(1.5rem, 5vw, 4rem)">
+  <p>No posts found for <strong>"{{ query }}"</strong>.</p>
+  <a
+    href="{{ url_for('home') }}"
+    class="btn-primary"
+    style="margin-top: 1rem; display: inline-block"
+  >
+    ← All posts
+  </a>
+</div>
+{% endif %} {% endblock %}

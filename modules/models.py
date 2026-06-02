@@ -13,7 +13,10 @@ class Comment:
     def formatted_date(self):
         try:
             dt = datetime.strptime(self.date, "%Y-%m-%d")
-            return dt.strftime("%-d %B %Y")
+            try:
+                return dt.strftime("%-d %B %Y")
+            except ValueError:
+                return dt.strftime("%#d %B %Y")
         except ValueError:
             return self.date
 
@@ -50,7 +53,10 @@ class BlogPost:
     def formatted_date(self):
         try:
             dt = datetime.strptime(self.date, "%Y-%m-%d")
-            return dt.strftime("%-d %B %Y")
+            try:
+                return dt.strftime("%-d %B %Y")
+            except ValueError:
+                return dt.strftime("%#d %B %Y")
         except ValueError:
             return self.date
 
